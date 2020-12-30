@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  front:
+    build: .
+    volumes:
+      - ./front:/chatbus
+    working_dir: /chatbus
+    command: npm start
+    tty: true
+    ports:
+      - 3000:3000
